@@ -7,7 +7,7 @@ class Contacts
     CONTACTS_FEED = CONTACTS_SCOPE + 'contacts/default/full/?max-results=1000'
     
     def contacts
-      @contacts.sort! { |a,b| a[:name] <=> b[:name] } if @contacts
+      @contacts.sort! { |a,b| a[0] <=> b[0] } if @contacts
       return @contacts if @contacts
     end
     
