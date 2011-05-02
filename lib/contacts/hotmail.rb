@@ -113,6 +113,7 @@ class Contacts
           end
         end
         
+        @contacts.sort! { |a,b| a[:name] <=> b[:name] } if @contacts
         return @contacts
       end
     end
